@@ -43,7 +43,7 @@ USER nextjs
 
 
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/tailwind.config.ts ./tailwind.config.ts
+# COPY --from=builder /app/tailwind.config.ts ./tailwind.config.ts
 
 
 # Automatically leverage output traces to reduce image size
