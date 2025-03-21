@@ -1,8 +1,8 @@
 import { redirect } from "next/navigation"
 import { getSession } from "@/lib/auth"
-import { LoginForm } from "@/components/login-form"
+import { RegisterForm } from "@/components/register-form"
 
-export default async function Home() {
+export default async function RegisterPage() {
   const session = await getSession()
 
   if (session) {
@@ -13,9 +13,9 @@ export default async function Home() {
     <main className="container max-w-md mx-auto p-4 flex flex-col min-h-screen justify-center">
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold">Money Tracker</h1>
-        <p className="text-muted-foreground mt-2">Track your income and expenses</p>
+        <p className="text-muted-foreground mt-2">Create your account</p>
       </div>
-      <LoginForm />
+      <RegisterForm />
     </main>
   )
 }
