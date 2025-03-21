@@ -48,7 +48,7 @@ export function SettingsForm({ userId, currentSettings }: SettingsFormProps) {
 
       router.refresh()
     } catch (error) {
-
+        console.log({error})
       toast("Error", {
         description: "Failed to update settings. Please try again.",
       })

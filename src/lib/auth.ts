@@ -47,6 +47,8 @@ function getUsers(): User[] {
         const data = fs.readFileSync(USERS_FILE, "utf8")
         return JSON.parse(data)
     } catch (error) {
+        console.log({error})
+
         return []
     }
 }
@@ -63,10 +65,10 @@ function findUserByEmail(email: string): User | undefined {
 }
 
 // Find user by ID
-function findUserById(id: string): User | undefined {
-    const users = getUsers()
-    return users.find((user) => user.id === id)
-}
+// function findUserById(id: string): User | undefined {
+//     const users = getUsers()
+//     return users.find((user) => user.id === id)
+// }
 
 // Register a new user
 export async function register(name: string, email: string, password: string) {
@@ -179,6 +181,8 @@ export async function getSession(): Promise<Session | null> {
         const session = JSON.parse(sessionCookie.value) as Session
         return session
     } catch (error) {
+        console.log({error})
+
         return null
     }
 }

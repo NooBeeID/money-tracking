@@ -49,6 +49,8 @@ export function RegisterForm() {
       })
       router.push("/")
     } catch (error) {
+        console.log({error})
+
       toast("Registration Failed", {
         description:"This email may already be in use. Please try another one."
       })

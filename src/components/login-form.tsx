@@ -38,6 +38,7 @@ export function LoginForm() {
       router.push("/dashboard")
       router.refresh()
     } catch (error) {
+        console.log({error})
       toast("Login failed", {
         description:"Invalid email or password. Please try again.",
       })

@@ -81,6 +81,8 @@ export function TransactionForm({ userId, categories }: TransactionFormProps) {
             router.push("/dashboard")
             router.refresh()
         } catch (error) {
+        console.log({error})
+
             toast("Error", {
                 description: "Failed to add transaction. Please try again.",
             })
